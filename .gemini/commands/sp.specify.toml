@@ -1,8 +1,12 @@
+# This file defines the `sp.specify` command, which is used to create or update a feature specification from a natural language description.
 description = "Create or update the feature specification from a natural language feature description."
 
+# The prompt is a template that defines the structure of the feature specification.
 prompt = """
 ---
+# The description of the command.
 description: Create or update the feature specification from a natural language feature description.
+# Handoffs are suggestions for the next command to run.
 handoffs: 
   - label: Build Technical Plan
     agent: sp.plan
