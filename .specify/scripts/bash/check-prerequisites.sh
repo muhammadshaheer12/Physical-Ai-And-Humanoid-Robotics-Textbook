@@ -79,14 +79,25 @@ SCRIPT_DIR="$(CDPATH="" cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 source "$SCRIPT_DIR/common.sh"
 
 # Get feature paths and validate branch
-eval $(get_feature_paths)
+REPO_ROOT=$(get_repo_root)
+CURRENT_BRANCH=$(get_current_branch)
+HAS_GIT=$(has_git)
+FEATURE_DIR=$(find_feature_dir_by_prefix "$REPO_ROOT" "$CURRENT_BRANCH")
+FEATURE_SPEC="$FEATURE_DIR/spec.md"
+IMPL_PLAN="$FEATURE_DIR/plan.md"
+TASKS="$FEATURE_DIR/tasks.md"
+RESEARCH="$FEATURE_DIR/research.md"
+DATA_MODEL="$FEATURE_DIR/data-model.md"
+QUICKSTART="$FEATURE_DIR/quickstart.md"
+CONTRACTS_DIR="$FEATURE_DIR/contracts"
+
 check_feature_branch "$CURRENT_BRANCH" "$HAS_GIT" || exit 1
 
 # If paths-only mode, output paths and exit (support JSON + paths-only combined)
 if $PATHS_ONLY; then
     if $JSON_MODE; then
         # Minimal JSON paths payload (no validation performed)
-        printf '{"REPO_ROOT":"%s","BRANCH":"%s","FEATURE_DIR":"%s","FEATURE_SPEC":"%s","IMPL_PLAN":"%s","TASKS":"%s"}\n' \
+        printf '{"REPO_ROOT":"%s","BRANCH":"%s","FEATURE_DIR":"%s","FEATURE_SPEC":"%s","IMPL_PLAN":"%s","TASKS":"%s"}\n'
             "$REPO_ROOT" "$CURRENT_BRANCH" "$FEATURE_DIR" "$FEATURE_SPEC" "$IMPL_PLAN" "$TASKS"
     else
         echo "REPO_ROOT: $REPO_ROOT"
@@ -160,7 +171,8 @@ else
     check_dir "$CONTRACTS_DIR" "contracts/"
     check_file "$QUICKSTART" "quickstart.md"
     
-    if $INCLUDE_TASKS; then
+    if $INCLUDE_TASKS;
+     then
         check_file "$TASKS" "tasks.md"
     fi
 fi

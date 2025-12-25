@@ -59,7 +59,11 @@ get_current_branch() {
 
 # Check if we have git available
 has_git() {
-    git rev-parse --show-toplevel >/dev/null 2>&1
+    if git rev-parse --show-toplevel >/dev/null 2>&1; then
+        echo "true"
+    else
+        echo "false"
+    fi
 }
 
 check_feature_branch() {
@@ -124,33 +128,5 @@ find_feature_dir_by_prefix() {
     fi
 }
 
-get_feature_paths() {
-    local repo_root=$(get_repo_root)
-    local current_branch=$(get_current_branch)
-    local has_git_repo="false"
-
-    if has_git; then
-        has_git_repo="true"
-    fi
-
-    # Use prefix-based lookup to support multiple branches per spec
-    local feature_dir=$(find_feature_dir_by_prefix "$repo_root" "$current_branch")
-
-    cat <<EOF
-REPO_ROOT='$repo_root'
-CURRENT_BRANCH='$current_branch'
-HAS_GIT='$has_git_repo'
-FEATURE_DIR='$feature_dir'
-FEATURE_SPEC='$feature_dir/spec.md'
-IMPL_PLAN='$feature_dir/plan.md'
-TASKS='$feature_dir/tasks.md'
-RESEARCH='$feature_dir/research.md'
-DATA_MODEL='$feature_dir/data-model.md'
-QUICKSTART='$feature_dir/quickstart.md'
-CONTRACTS_DIR='$feature_dir/contracts'
-EOF
-}
-
 check_file() { [[ -f "$1" ]] && echo "  ✓ $2" || echo "  ✗ $2"; }
 check_dir() { [[ -d "$1" && -n $(ls -A "$1" 2>/dev/null) ]] && echo "  ✓ $2" || echo "  ✗ $2"; }
-
