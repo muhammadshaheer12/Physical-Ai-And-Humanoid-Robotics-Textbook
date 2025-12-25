@@ -128,5 +128,30 @@ find_feature_dir_by_prefix() {
     fi
 }
 
+get_feature_paths() {
+    local repo_root=$(get_repo_root)
+    local current_branch=$(get_current_branch)
+    local has_git_repo="false"
+
+    if has_git; then
+        has_git_repo="true"
+    fi
+
+    # Use prefix-based lookup to support multiple branches per spec
+    local feature_dir=$(find_feature_dir_by_prefix "$repo_root" "$current_branch")
+
+    echo "export REPO_ROOT='$repo_root'"
+    echo "export CURRENT_BRANCH='$current_branch'"
+    echo "export HAS_GIT='$has_git_repo'"
+    echo "export FEATURE_DIR='$feature_dir'"
+    echo "export FEATURE_SPEC='$feature_dir/spec.md'"
+    echo "export IMPL_PLAN='$feature_dir/plan.md'"
+    echo "export TASKS='$feature_dir/tasks.md'"
+    echo "export RESEARCH='$feature_dir/research.md'"
+    echo "export DATA_MODEL='$feature_dir/data-model.md'"
+    echo "export QUICKSTART='$feature_dir/quickstart.md'"
+    echo "export CONTRACTS_DIR='$feature_dir/contracts'"
+}
+
 check_file() { [[ -f "$1" ]] && echo "  ✓ $2" || echo "  ✗ $2"; }
 check_dir() { [[ -d "$1" && -n $(ls -A "$1" 2>/dev/null) ]] && echo "  ✓ $2" || echo "  ✗ $2"; }

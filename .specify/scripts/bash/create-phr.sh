@@ -41,10 +41,10 @@ FEATURE=""
 # Parse arguments
 while [[ $# -gt 0 ]]; do
   case "$1" in
-    --json) JSON_MODE=true; shift ;;
-    --title) TITLE=${2:-}; shift 2 ;;
-    --stage) STAGE=${2:-}; shift 2 ;;
-    --feature) FEATURE=${2:-}; shift 2 ;;
+    --json) JSON_MODE=true; shift ;; 
+    --title) TITLE=${2:-}; shift 2 ;; 
+    --stage) STAGE=${2:-}; shift 2 ;; 
+    --feature) FEATURE=${2:-}; shift 2 ;; 
     --help|-h)
       cat <<EOF
 Usage: $0 --title <title> --stage <stage> [options]
@@ -75,7 +75,7 @@ Examples:
 EOF
       exit 0
       ;;
-    *) shift ;;
+    *) shift ;; 
   esac
 done
 
@@ -117,7 +117,7 @@ case "$STAGE" in
     PROMPTS_DIR="$REPO_ROOT/history/prompts/constitution"
     VALID_STAGES=("constitution")
     CONTEXT="constitution"
-    ;;
+    ;; 
   spec|plan|tasks|red|green|refactor|explainer|misc)
     # Feature-specific stages: require specs/ directory and feature context
     if [[ ! -d "$SPECS_DIR" ]]; then
@@ -182,17 +182,17 @@ case "$STAGE" in
     PROMPTS_DIR="$REPO_ROOT/history/prompts/$FEATURE"
     VALID_STAGES=("spec" "plan" "tasks" "red" "green" "refactor" "explainer" "misc")
     CONTEXT="feature"
-    ;;
+    ;; 
   general)
     # General stage: catch-all that goes to history/prompts/general/
     PROMPTS_DIR="$REPO_ROOT/history/prompts/general"
     VALID_STAGES=("general")
     CONTEXT="general"
-    ;;
+    ;; 
   *)
     echo "Error: Unknown stage '$STAGE'" >&2
     exit 1
-    ;;
+    ;; 
 esac
 
 # Validate stage
