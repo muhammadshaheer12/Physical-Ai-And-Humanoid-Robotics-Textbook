@@ -7,7 +7,7 @@ surface: agent
 model: gemini-1.5-pro
 feature: 1-ai-classroom-efficiency-paper
 branch: 1-ai-classroom-efficiency-paper
-user: shaheershaheen
+user: muhammad shaheer
 command: /sp.specify
 labels: [spec]
 links:
