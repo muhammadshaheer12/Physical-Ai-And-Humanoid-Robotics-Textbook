@@ -8,7 +8,7 @@ BRANCH_NUMBER=""
 ARGS=()
 i=1
 while [ $i -le $# ]; do
-    arg="${!i}"
+    arg=("${!i}")
     case "$arg" in
         --json) 
             JSON_MODE=true 
@@ -19,7 +19,7 @@ while [ $i -le $# ]; do
                 exit 1
             fi
             i=$((i + 1))
-            next_arg="${!i}"
+            next_arg=("${!i}")
             # Check if the next argument is another option (starts with --)
             if [[ "$next_arg" == --* ]]; then
                 echo 'Error: --short-name requires a value' >&2
@@ -33,7 +33,7 @@ while [ $i -le $# ]; do
                 exit 1
             fi
             i=$((i + 1))
-            next_arg="${!i}"
+            next_arg=("${!i}")
             if [[ "$next_arg" == --* ]]; then
                 echo 'Error: --number requires a value' >&2
                 exit 1
@@ -54,7 +54,7 @@ while [ $i -le $# ]; do
             echo "  $0 'Implement OAuth2 integration for API' --number 5"
             exit 0
             ;;
-        *) 
+        *)
             ARGS+=("$arg") 
             ;;
     esac
@@ -86,7 +86,8 @@ get_highest_from_specs() {
     local highest=0
     
     if [ -d "$specs_dir" ]; then
-        for dir in "$specs_dir"/*; do
+        for dir in "$specs_dir"/*;
+        do
             [ -d "$dir" ] || continue
             dirname=$(basename "$dir")
             number=$(echo "$dirname" | grep -o '^[0-9]\+' || echo "0")
@@ -266,7 +267,7 @@ if [ ${#BRANCH_NAME} -gt $MAX_BRANCH_LENGTH ]; then
     ORIGINAL_BRANCH_NAME="$BRANCH_NAME"
     BRANCH_NAME="${FEATURE_NUM}-${TRUNCATED_SUFFIX}"
     
-    >&2 echo "[specify] Warning: Branch name exceeded GitHub's 244-byte limit"
+    >&2 echo "[specify] Warning: Branch name exceeded GitHub\'s 244-byte limit"
     >&2 echo "[specify] Original: $ORIGINAL_BRANCH_NAME (${#ORIGINAL_BRANCH_NAME} bytes)"
     >&2 echo "[specify] Truncated to: $BRANCH_NAME (${#BRANCH_NAME} bytes)"
 fi
