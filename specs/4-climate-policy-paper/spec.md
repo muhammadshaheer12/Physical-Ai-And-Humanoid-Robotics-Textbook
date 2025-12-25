@@ -5,6 +5,14 @@
 **Status**: Draft  
 **Input**: User description: "Project: Research Paper on Climate Policy Solutions (Post-2015) Intent: Analyze and compare climate policy solutions adopted since 2015 for an undergraduate economics audience. Please review the specification to identify: - Ambiguous terms (e.g., what qualifies as a “policy solution” or “effectiveness”) - Missing assumptions (citation style, paper structure, tone, level of economic analysis) - Incomplete requirements (handling conflicting evidence, revision process, evaluation metrics) - Scope conflicts (historical overview vs. current policy analysis, global vs. regional focus) Identify gaps or unclear requirements that must be resolved before planning the paper structure and writing begins."
 
+## Clarifications
+### Session 2025-12-25
+- Q: What specific criteria define a "policy solution" for inclusion? → A: Broadly defined: Include government-mandated regulations, market-based mechanisms (e.g., carbon pricing), and international agreements.
+- Q: What are the primary metrics for evaluating "effectiveness" of policies? → A: Balanced: Emissions reduction, economic impact, and feasibility.
+- Q: What specific economic models or frameworks are expected for the economic analysis? → A: Cost-Benefit Analysis (CBA): Focus on a comprehensive evaluation of policy costs versus benefits.
+- Q: Should the paper focus on specific regions or a broader global overview of policy types? → A: Broader global overview of policy types: Focus on the general characteristics and economic implications of different policy types across various contexts.
+- Q: Which citation style should be used? → A: APA Style: American Psychological Association style, common in social sciences.
+
 ## User Scenarios & Testing *(mandatory)*
 
 ### User Story 1 - Undergraduate Student Researches Policy Solutions (Priority: P1)
@@ -41,13 +49,13 @@ An economics instructor evaluates the research paper for its analytical depth, c
 
 - **FR-001**: The paper MUST analyze and compare climate policy solutions adopted since 2015.
 - **FR-002**: The paper MUST be written for an undergraduate economics audience.
-- **FR-003**: The paper MUST define what constitutes a "policy solution" within its context. [NEEDS CLARIFICATION: What specific criteria define a "policy solution" for inclusion? e.g., government-mandated, market-based, international agreements?]
-- **FR-004**: The paper MUST define metrics for evaluating "effectiveness" of policies. [NEEDS CLARIFICATION: What are the primary metrics for effectiveness? e.g., emissions reduction, economic impact, equity, feasibility?]
+- **FR-003**: The paper MUST define what constitutes a "policy solution" within its context, including government-mandated regulations, market-based mechanisms, and international agreements.
+- **FR-004**: The paper MUST define metrics for evaluating "effectiveness" of policies, focusing on emissions reduction, economic impact, and feasibility.
 - **FR-005**: The paper MUST address potential conflicting evidence regarding policy outcomes.
-- **FR-006**: The paper MUST include economic analysis appropriate for an undergraduate level. [NEEDS CLARIFICATION: What specific economic models or frameworks are expected? e.g., cost-benefit analysis, general equilibrium, specific sectoral models?]
+- **FR-006**: The paper MUST include economic analysis appropriate for an undergraduate level, primarily utilizing Cost-Benefit Analysis (CBA).
 - **FR-007**: The paper MUST maintain a clear, academic tone.
-- **FR-008**: The paper MUST cover policies with a global perspective. [NEEDS CLARIFICATION: Should the focus be on specific regions or a broader global overview of policy types?]
-- **FR-009**: The paper MUST follow a consistent citation style. [NEEDS CLARIFICATION: Which citation style should be used? e.g., APA, MLA, Chicago, Harvard?]
+- **FR-008**: The paper MUST cover policies with a broader global overview of policy types, focusing on general characteristics and economic implications across various contexts.
+- **FR-009**: The paper MUST follow the APA Style for citations.
 
 ### Key Entities *(include if feature involves data)*
 
