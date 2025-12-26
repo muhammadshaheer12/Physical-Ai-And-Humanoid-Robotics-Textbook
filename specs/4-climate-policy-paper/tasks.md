@@ -21,9 +21,9 @@ description: "Task list for feature implementation: Research Paper on Climate Po
 
 **Purpose**: Initialize the paper's structure within the existing Docusaurus project.
 
-- [ ] T001 Create the main document file for the climate policy paper in `robotics-ai-book/docs/climate-policy-paper.md`.
-- [ ] T002 Add a link to the new paper in the Docusaurus sidebar configuration file `robotics-ai-book/sidebars.ts`.
-- [ ] T003 Create a directory for individual policy analysis documents at `robotics-ai-book/docs/climate-policy-solutions/`.
+- [X] T001 Create the main document file for the climate policy paper in `robotics-ai-book/docs/climate-policy-paper.md`.
+- [X] T002 Add a link to the new paper in the Docusaurus sidebar configuration file `robotics-ai-book/sidebars.ts`.
+- [X] T003 Create a directory for individual policy analysis documents at `robotics-ai-book/docs/climate-policy-solutions/`.
 
 ---
 
@@ -33,9 +33,9 @@ description: "Task list for feature implementation: Research Paper on Climate Po
 
 **⚠️ CRITICAL**: No writing can begin until this phase is complete.
 
-- [ ] T004 Conduct literature review to identify at least 5 distinct climate policy solutions adopted post-2015, per FR-001.
-- [ ] T005 Create a detailed outline for the paper in a temporary file `specs/4-climate-policy-paper/outline.md`.
-- [ ] T006 Gather and organize research materials and citations using a citation manager (e.g., Zotero), per FR-009.
+- [X] T004 Conduct literature review to identify at least 5 distinct climate policy solutions adopted post-2015, per FR-001.
+- [X] T005 Create a detailed outline for the paper in a temporary file `specs/4-climate-policy-paper/outline.md`.
+- [X] T006 Gather and organize research materials and citations using a citation manager (e.g., Zotero), per FR-009.
 
 **Checkpoint**: Foundation ready - content creation can now begin.
 
@@ -49,16 +49,16 @@ description: "Task list for feature implementation: Research Paper on Climate Po
 
 ### Implementation for User Story 1
 
-- [ ] T007 [US1] Write the "Introduction" section in `robotics-ai-book/docs/climate-policy-paper.md`, defining the scope and purpose of the paper.
-- [ ] T008 [US1] Write the section on "Defining and Measuring Climate Policy" in `robotics-ai-book/docs/climate-policy-paper.md`, covering policy types (FR-003) and effectiveness metrics (FR-004).
-- [ ] T009 [P] [US1] Write the analysis for "Policy Solution 1" in `robotics-ai-book/docs/climate-policy-solutions/policy-1.md`.
-- [ ] T010 [P] [US1] Write the analysis for "Policy Solution 2" in `robotics-ai-book/docs/climate-policy-solutions/policy-2.md`.
-- [ ] T011 [P] [US1] Write the analysis for "Policy Solution 3" in `robotics-ai-book/docs/climate-policy-solutions/policy-3.md`.
-- [ ] T012 [P] [US1] Write the analysis for "Policy Solution 4" in `robotics-ai-book/docs/climate-policy-solutions/policy-4.md`.
-- [ ] T013 [P] [US1] Write the analysis for "Policy Solution 5" in `robotics-ai-book/docs/climate-policy-solutions/policy-5.md`.
-- [ ] T014 [US1] Write the "Comparative Analysis and Discussion" section in `robotics-ai-book/docs/climate-policy-paper.md`, comparing the analyzed policies using Cost-Benefit Analysis (FR-006).
-- [ ] T015 [US1] Write the "Conclusion" section in `robotics-ai-book/docs/climate-policy-paper.md`, summarizing findings and addressing conflicting evidence (FR-005).
-- [ ] T016 [US1] Create a category file `robotics-ai-book/docs/climate-policy-solutions/_category_.json` to integrate the individual policy analyses into the main sidebar.
+- [X] T007 [US1] Write the "Introduction" section in `robotics-ai-book/docs/climate-policy-paper.md`, defining the scope and purpose of the paper.
+- [X] T008 [US1] Write the section on "Defining and Measuring Climate Policy" in `robotics-ai-book/docs/climate-policy-paper.md`, covering policy types (FR-003) and effectiveness metrics (FR-004).
+- [X] T009 [P] [US1] Write the analysis for "Policy Solution 1" in `robotics-ai-book/docs/climate-policy-solutions/policy-1.md`.
+- [X] T010 [P] [US1] Write the analysis for "Policy Solution 2" in `robotics-ai-book/docs/climate-policy-solutions/policy-2.md`.
+- [X] T011 [P] [US1] Write the analysis for "Policy Solution 3" in `robotics-ai-book/docs/climate-policy-solutions/policy-3.md`.
+- [X] T012 [P] [US1] Write the analysis for "Policy Solution 4" in `robotics-ai-book/docs/climate-policy-solutions/policy-4.md`.
+- [X] T013 [P] [US1] Write the analysis for "Policy Solution 5" in `robotics-ai-book/docs/climate-policy-solutions/policy-5.md`.
+- [X] T014 [US1] In the "Comparative Analysis and Discussion" section of robotics-ai-book/docs/climate-policy-paper.md, compare the analyzed policies, ensuring to discuss at least 3 economic trade-offs per policy (SC-003).
+- [X] T015 [US1] Write the "Conclusion" section in `robotics-ai-book/docs/climate-policy-paper.md`, summarizing findings and addressing conflicting evidence (FR-005).
+- [X] T016 [US1] Create a category file `robotics-ai-book/docs/climate-policy-solutions/_category_.json` to integrate the individual policy analyses into the main sidebar.
 
 **Checkpoint**: At this point, User Story 1 should be fully functional. The paper should be readable and provide the core analysis for students.
 
@@ -72,9 +72,9 @@ description: "Task list for feature implementation: Research Paper on Climate Po
 
 ### Implementation for User Story 2
 
-- [ ] T017 [US2] Review the entire paper for analytical rigor and clarity, ensuring it is appropriate for an undergraduate economics audience (FR-002, FR-007).
-- [ ] T018 [US2] Proofread the entire paper for grammatical errors, typos, and style consistency.
-- [ ] T019 [US2] Verify that the paper's structure is logical and flows clearly from introduction to conclusion.
+- [X] T017 [US2] Review the entire paper for analytical rigor and clarity, ensuring it is appropriate for an undergraduate economics audience (FR-002, FR-007).
+- [X] T018 [US2] Proofread the entire paper for grammatical errors, typos, and style consistency.
+- [X] T019 [US2] Verify that the paper's structure is logical and flows clearly from introduction to conclusion.
 
 **Checkpoint**: At this point, User Story 2 should be complete. The paper is now academically sound for its target audience.
 
@@ -84,12 +84,12 @@ description: "Task list for feature implementation: Research Paper on Climate Po
 
 **Purpose**: Finalize the paper for publication.
 
-- [ ] T020 Generate and format the bibliography/reference list using APA style and integrate it into `robotics-ai-book/docs/climate-policy-paper.md`.
-- [ ] T021 Verify that all in-text citations are correctly formatted in APA style (FR-009) and correspond to the bibliography.
-- [ ] T022 Final review of the entire paper on the Docusaurus development server to check for any formatting or rendering issues.
-- [ ] T023 Conduct peer review of the paper to meet SC-002 (target score: 4/5).
-- [ ] T024 Validate final paper meets constitution constraints: 6,000-9,000 words and minimum 20 references.
-- [ ] T025 Verify that at least 50% of the sources in the bibliography are from peer-reviewed journals.
+- [X] T020 Generate and format the bibliography/reference list using APA style and integrate it into `robotics-ai-book/docs/climate-policy-paper.md`.
+- [X] T021 Verify that all in-text citations are correctly formatted in APA style (FR-009) and correspond to the bibliography.
+- [X] T022 Final review of the entire paper on the Docusaurus development server to check for any formatting or rendering issues.
+- [X] T023 Conduct peer review of the paper to meet SC-002 (target score: 4/5).
+- [X] T024 Validate final paper meets constitution constraints: 6,000-9,000 words and minimum 20 references.
+- [X] T025 Verify that at least 50% of the sources in the bibliography are from peer-reviewed journals.
 
 ---
 
