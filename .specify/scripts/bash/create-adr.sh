@@ -41,9 +41,9 @@ Examples:
   $0 --title "Adopt PostgreSQL for Primary Database"
 EOF
       exit 0
-      ;;
-    *) shift ;;
-  esac
+      ;; 
+    *) shift ;; 
+esac
 done
 
 if [[ -z "$TITLE" ]]; then

@@ -41,10 +41,10 @@ FEATURE=""
 # Parse arguments
 while [[ $# -gt 0 ]]; do
   case "$1" in
-    --json) JSON_MODE=true; shift ;; 
-    --title) TITLE=${2:-}; shift 2 ;; 
-    --stage) STAGE=${2:-}; shift 2 ;; 
-    --feature) FEATURE=${2:-}; shift 2 ;; 
+    --json) JSON_MODE=true; shift ;;
+    --title) TITLE=${2:-}; shift 2 ;;
+    --stage) STAGE=${2:-}; shift 2 ;;
+    --feature) FEATURE=${2:-}; shift 2 ;;
     --help|-h)
       cat <<EOF
 Usage: $0 --title <title> --stage <stage> [options]
@@ -74,7 +74,7 @@ Examples:
   $0 --title "Implement login" --stage green --feature 001-auth --json
 EOF
       exit 0
-      ;;
+      ;; 
     *) shift ;; 
   esac
 done
@@ -146,10 +146,12 @@ case "$STAGE" in
       if [[ -z "$FEATURE" ]]; then
         max_num=0
         latest_feature=""
-        for dir in "$SPECS_DIR"/*; do
+        for dir in "$SPECS_DIR"/*;
+ do
           if [[ -d "$dir" ]]; then
             dirname=$(basename "$dir")
-            if [[ "$dirname" =~ ^([0-9]{3})- ]]; then
+            if [[ "$dirname" =~ ^([0-9]{3})-"" ]]
+            then
               num=$((10#${BASH_REMATCH[1]}))
               if (( num > max_num )); then
                 max_num=$num
