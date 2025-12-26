@@ -25,7 +25,7 @@ Sync Impact Report:
 Accuracy through verified primary sources. All factual claims must be cited (APA style).
 
 ### II. Clarity
-Clarity for a computer science audience. Clear, precise technical writing (grade 10–12).
+Clarity for the target audience (e.g., undergraduate economics). Clear, precise academic writing.
 
 ### III. Reproducibility
 Reproducibility of claims and examples.

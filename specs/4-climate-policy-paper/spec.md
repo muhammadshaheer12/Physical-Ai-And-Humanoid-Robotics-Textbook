@@ -13,6 +13,9 @@
 - Q: Should the paper focus on specific regions or a broader global overview of policy types? → A: Broader global overview of policy types: Focus on the general characteristics and economic implications of different policy types across various contexts.
 - Q: Which citation style should be used? → A: APA Style: American Psychological Association style, common in social sciences.
 
+### Session 2025-12-26
+- Q: What do "needs clarification markers" in SC-004 refer to? → A: Unresolved Questions in a Q&A Log
+
 ## User Scenarios & Testing *(mandatory)*
 
 ### User Story 1 - Undergraduate Student Researches Policy Solutions (Priority: P1)
@@ -71,5 +74,5 @@ An economics instructor evaluates the research paper for its analytical depth, c
 -   **SC-001**: The paper clearly identifies and analyzes at least 5 distinct climate policy solutions adopted post-2015.
 -   **SC-002**: The paper achieves a clarity and academic rigor rating of at least 4 out of 5 from peer review (simulated by instructor feedback).
 -   **SC-003**: The paper effectively compares the economic impacts of policies, as evidenced by a discussion covering at least 3 economic trade-offs per policy.
--   **SC-004**: All identified [NEEDS CLARIFICATION] markers are resolved and integrated into the final paper structure/content.
+- **SC-004**: All identified unresolved items in the Q&A log are resolved and integrated into the final paper structure/content.
 -   **SC-005**: The paper adheres to a consistent structure and citation style, with less than 3 formatting errors per 1000 words.

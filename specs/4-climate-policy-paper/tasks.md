@@ -87,6 +87,9 @@ description: "Task list for feature implementation: Research Paper on Climate Po
 - [ ] T020 Generate and format the bibliography/reference list using APA style and integrate it into `robotics-ai-book/docs/climate-policy-paper.md`.
 - [ ] T021 Verify that all in-text citations are correctly formatted in APA style (FR-009) and correspond to the bibliography.
 - [ ] T022 Final review of the entire paper on the Docusaurus development server to check for any formatting or rendering issues.
+- [ ] T023 Conduct peer review of the paper to meet SC-002 (target score: 4/5).
+- [ ] T024 Validate final paper meets constitution constraints: 6,000-9,000 words and minimum 20 references.
+- [ ] T025 Verify that at least 50% of the sources in the bibliography are from peer-reviewed journals.
 
 ---
 
